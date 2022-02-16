@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="1024dp"
+        android:layout_height="935dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/papers_co_bb40_night_city_dark_minimal_illustration_art_green_android_large" />
+
+    <TextView
+        android:id="@+id/npergunta"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+        android:text="0/5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#CDCDCD"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pergunta"
+        app:layout_constraintEnd_toEndOf="@+id/PERGUNTA"
+        app:layout_constraintStart_toStartOf="@+id/PERGUNTA"
+        app:layout_constraintTop_toTopOf="@+id/PERGUNTA" />
+
+    <TextView
+        android:id="@+id/npontuacao"
+        android:layout_width="96dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="28dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#CDCDCD"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pergunta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/PONTUACAO"
+        app:layout_constraintTop_toTopOf="@+id/PONTUACAO"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/bprinc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="jogo"
+        android:text="Começar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/resposta"
+        android:layout_width="287dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="120dp"
+        android:hint="Capital"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#CDCDCD"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pergunta" />
+
+    <TextView
+        android:id="@+id/pergunta"
+        android:layout_width="198dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="160dp"
+        android:text="Qual a capital de"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#CDCDCD"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/PONTUACAO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="PONTUAÇÃO"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#CDCDCD"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/PERGUNTA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="PERGUNTA"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#CDCDCD"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="163dp"
+        android:layout_height="48dp"
+
+        android:layout_marginTop="132dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#4CAF50"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resposta" />
+
+    <Button
+        android:id="@+id/confirmar"
+        android:layout_width="175dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="120dp"
+        android:onClick="enviar"
+        android:text="Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pergunta" />
+
+    <Button
+        android:id="@+id/prox"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="176dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="192dp"
+        android:onClick="proxima"
+        android:text="Proxima >>"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resposta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
